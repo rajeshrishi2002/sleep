@@ -230,12 +230,14 @@
         </defs>
       </svg>
       
-      <button id="animal-toggle" type="button" onclick="toggleAnimal()">MEOW</button>
+      <button id="animal-toggle" type="button" onclick="toggleAnimal(), audio.play();">MEOW</button>
       
     
       
 </body>
 <script>
+  const audio=new Audio();
+        audio.src="sleep.mp3";
 document.getElementById("lightSwitch").addEventListener("click", toggleLight);
 randomiseAnimal();
 
